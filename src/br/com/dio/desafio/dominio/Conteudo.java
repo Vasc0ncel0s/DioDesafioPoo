@@ -8,6 +8,7 @@ public abstract class Conteudo {
     private String descricao;
 
     public static boolean isPresent() {
+        return false;
     }
 
     public abstract double calcularXp();

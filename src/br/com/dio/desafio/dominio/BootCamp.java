@@ -12,30 +12,18 @@ public class BootCamp {
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
-    private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private Set<Conteudo> conteudos;
 
-    public String getName() {
-        return name;
+    public BootCamp() {
+        conteudos = new LinkedHashSet<>();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Set<Conteudo> getConteudos() {
+        return conteudos;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public LocalDate getDataInicial() {
-        return dataInicial;
-    }
-
-    public LocalDate getDataFinal() {
-        return dataFinal;
+    public void setConteudos(Set<Conteudo> conteudos) {
+        this.conteudos = conteudos;
     }
 
     public Set<Dev> getDevsInscritos() {
@@ -46,12 +34,40 @@ public class BootCamp {
         this.devsInscritos = devsInscritos;
     }
 
-    public Set<Conteudo> getConteudos() {
-        return conteudos;
+    public LocalDate getDataFinal() {
+        return dataFinal;
     }
 
-    public void setConteudos(Set<Conteudo> conteudos) {
-        this.conteudos = conteudos;
+    public LocalDate getDataInicial() {
+        return dataInicial;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "BootCamp{" +
+                "name='" + name + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", dataInicial=" + dataInicial +
+                ", dataFinal=" + dataFinal +
+                ", devsInscritos=" + devsInscritos +
+                ", conteudos=" + conteudos +
+                '}';
     }
 
     @Override

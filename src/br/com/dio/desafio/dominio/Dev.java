@@ -12,7 +12,7 @@ public class Dev {
 
 
     public void inscreverBootcamp(BootCamp bootCamp){
-        this.conteudosInscritos.addAll(bootCamp.getConteudos());
+        bootCamp.getConteudos().addAll(this.conteudosInscritos);
         bootCamp.getDevsInscritos().add(this);
     }
 
