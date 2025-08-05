@@ -1,9 +1,12 @@
 package br.com.dio.desafio.dominio;
 
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+
+import static java.util.Arrays.stream;
 
 public class Dev {
     private String name;
@@ -27,10 +30,13 @@ public class Dev {
     }
 
     public double calcularTotalXp(){
-        return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(Conteudo::calcularXp)
-                .sum();
+        Iterator<Conteudo> iterator = this.getConteudosConcluidos.iterator();
+        double soma = 0;
+        while (iterator.hasNext()){
+            double next = iterator.next().calcularXp();
+            soma +=next;
+        }
+                return soma;
     }
 
     public String getName() {
