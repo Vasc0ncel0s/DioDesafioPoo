@@ -65,4 +65,10 @@ public class BootCamp {
     public int hashCode() {
         return Objects.hash(name, dataInicial, dataFinal, devsInscritos, conteudos);
     }
+
+    public void setConteudo(Curso curso1) {
+    }
+
+    public void setConteudo(Mentoria mentoria) {
+    }
 }

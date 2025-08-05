@@ -8,10 +8,11 @@ import java.util.Set;
 
 import static java.util.Arrays.stream;
 
-public class Dev {
+public class Dev extends Conteudo{
     private String name;
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+    private Iterable<Object> getConteudosConcluidos;
 
 
     public void inscreverBootcamp(BootCamp bootCamp){
